@@ -23,7 +23,7 @@ public class Ladder {
     }
 
     public Integer move(int index) {
-        AtomicInteger position = new AtomicInteger(index);
+        final AtomicInteger position = new AtomicInteger(index);
         lines.forEach(line -> position.set(MovingStrategy.move(line, position.get())));
         return position.get();
     }

@@ -24,9 +24,9 @@ public class LadderMain {
         resultView.printWinningCategory(winningCategories);
 
         LadderGame ladderGame = new LadderGame(ladder, users);
-        ladderGame.start();
+        LadderResult ladderResult = ladderGame.start();
 
-        resultView.printResult(inputView.askWhoWinningCategory(), winningCategories, ladderGame.toResult());
+        resultView.printResult(inputView.askWhoWinningCategory(), winningCategories, ladderResult);
 
     }
 }

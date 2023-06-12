@@ -17,10 +17,9 @@ public class LadderGameTest {
         LadderGame ladderGame = new LadderGame(ladder, users);
 
         //when
-        ladderGame.start();
+        LadderResult ladderResult = ladderGame.start();
 
         //then
-        LadderResult ladderResult = ladderGame.toResult();
         assertThat(ladderResult.get(new User("A"))).isEqualTo(0);
         assertThat(ladderResult.get(new User("B"))).isEqualTo(1);
         assertThat(ladderResult.get(new User("C"))).isEqualTo(2);

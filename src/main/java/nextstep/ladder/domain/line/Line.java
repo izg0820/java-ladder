@@ -37,11 +37,8 @@ public class Line {
         return position >= MIN_WIDTH && position < this.line.size();
     }
 
-    public boolean isLefEnd(int position) {
-        return position == MIN_WIDTH;
+    public boolean isEnd(int position) {
+        return position < MIN_WIDTH || position >= this.line.size();
     }
 
-    public boolean isRightEnd(int position) {
-        return position >= this.line.size();
-    }
 }

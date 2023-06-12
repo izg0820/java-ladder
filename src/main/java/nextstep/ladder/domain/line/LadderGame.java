@@ -14,13 +14,11 @@ public class LadderGame {
         this.ladderResult = new LadderResult();
     }
 
-    public void start() {
+    public LadderResult start() {
         for (int index = 0; index < users.userCount(); index++) {
             ladderResult.put(users.findUser(index), ladder.move(index));
         }
-    }
-
-    public LadderResult toResult() {
         return ladderResult;
     }
+
 }

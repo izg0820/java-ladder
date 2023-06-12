@@ -18,7 +18,7 @@ public class MovingStrategy {
     }
 
     private static boolean moveLeft(Line line, int position) {
-        if (line.isLefEnd(position)) {
+        if (line.isEnd(position)) {
             return false;
         }
 
@@ -26,7 +26,7 @@ public class MovingStrategy {
     }
 
     private static boolean moveRight(Line line, int position) {
-        if (line.isRightEnd(position)) {
+        if (line.isEnd(position)) {
             return false;
         }
         return (line.isNotEnd(position + NEXT_MOVE) && line.hasLine(position));
